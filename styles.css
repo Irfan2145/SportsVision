@@ -1,0 +1,850 @@
+/* ========================================
+   GLOBAL STYLES & RESET
+   ======================================== */
+
+/* Universal selector - resets default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and HTML styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Container class for consistent content width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+
+/* Primary button - blue background */
+.btn-primary {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+/* Secondary button - white background with blue border */
+.btn-secondary {
+    background-color: white;
+    color: #0066cc;
+    border: 2px solid #0066cc;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Secondary button hover effect */
+.btn-secondary:hover {
+    background-color: #f5f9ff;
+    color: #0052a3;
+    border-color: #0052a3;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Large button for prominent CTAs */
+.btn-large {
+    padding: 15px 40px;
+    font-size: 18px;
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Navigation container using Flexbox */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Logo styling */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0066cc;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+/* Navigation links using Flexbox */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0066cc;
+}
+
+.nav-btn {
+    margin-left: 20px;
+}
+
+/* Responsive navigation - mobile menu toggle */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .nav-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+}
+
+/* Hero container using Flexbox for responsive layout */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Hero content takes 50% width */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-headline {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
+}
+
+.hero-subheadline {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Hero buttons container using Flexbox */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Hero image container takes 50% width */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive hero section */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .hero-headline {
+        font-size: 32px;
+    }
+    
+    .hero-subheadline {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   SECTION HEADERS
+   ======================================== */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+
+.services {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+/* Services grid using CSS Grid with 3 columns */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Service card styling */
+.service-card {
+    padding: 40px 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Service card hover effect */
+.service-card:hover {
+    background-color: #f0f4ff;
+    border-color: #0066cc;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 102, 204, 0.15);
+}
+
+.service-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive services grid */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+}
+
+/* ========================================
+   PORTFOLIO SECTION
+   ======================================== */
+
+.portfolio {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+/* Portfolio grid using CSS Grid with 3 columns */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Project card styling */
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Project card hover effect */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Image zoom effect on hover */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive portfolio grid */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ========================================
+   WHY CHOOSE US SECTION
+   ======================================== */
+
+.why-choose-us {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+/* Features grid using CSS Grid with 4 columns */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Feature box styling */
+.feature-box {
+    padding: 30px 25px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+/* Feature box hover effect */
+.feature-box:hover {
+    background-color: #f0f4ff;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.1);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive features grid */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .feature-box {
+        padding: 20px 15px;
+    }
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+.testimonials {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+}
+
+/* Testimonials grid using CSS Grid with 3 columns */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Testimonial card hover effect */
+.testimonial-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.testimonial-stars {
+    font-size: 20px;
+    color: #ffc107;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Testimonial author section using Flexbox */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0066cc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.author-role {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Responsive testimonials grid */
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   CALL TO ACTION SECTION
+   ======================================== */
+
+.cta-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.cta-headline {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+}
+
+.cta-subheadline {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* CTA button styling - white on blue background */
+.cta-section .btn-primary {
+    background-color: white;
+    color: #0066cc;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #f0f4ff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    color: #0066cc;
+}
+
+/* Responsive CTA section */
+@media (max-width: 768px) {
+    .cta-headline {
+        font-size: 28px;
+    }
+    
+    .cta-subheadline {
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+/* Contact grid using CSS Grid with 3 columns */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* Contact item styling */
+.contact-item {
+    text-align: center;
+    padding: 30px;
+}
+
+.contact-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contact-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+.contact-text {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive contact grid */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+/* Footer content using CSS Grid with 3 columns */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Footer links list */
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0066cc;
+}
+
+/* Social links container using Flexbox */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0066cc;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer {
+        padding: 40px 20px 15px;
+    }
+}
+
+/* ========================================
+   GENERAL RESPONSIVENESS
+   ======================================== */
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .hero-headline {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .cta-headline {
+        font-size: 22px;
+    }
+}
